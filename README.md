@@ -153,6 +153,8 @@ ssh -i ~/.ssh/ec2sample ec2-user@ec2-11-22-33-44.ca-central-1.amazonaws.com
 ```
 ansible-playbook -i aws_ec2.yml update.yml
 ```
+If all goes well the Ansible output should not be red text.
+
 
 Note: if you are trying to get ssh agent working in WSL, the syntax is slightly different:
 ```
