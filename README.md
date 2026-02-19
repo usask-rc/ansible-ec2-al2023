@@ -135,7 +135,7 @@ If you are using a different private key then you need to update the key file pa
 
 14. Run ansible and show the EC2 hosts
 
-Run the following command and see if it shows the EC2 hosts:
+Run the following command and see that it shows the EC2 hosts:
 ```
 ansible-inventory -i aws_ec2.yml --graph
 ```
@@ -145,7 +145,7 @@ ansible-inventory -i aws_ec2.yml --graph
 Get the public host name from the inventory list above.  It will be something like `ec2-11-22-33-44.ca-central-1.amazonaws.com`. Using this host name, run a command like the following:
 
 ```
-ssh -i ~/.ssh/ec2sample ec2_user@ec2-11-22-33-44.ca-central-1.amazonaws.com
+ssh -i ~/.ssh/ec2sample ec2-user@ec2-11-22-33-44.ca-central-1.amazonaws.com
 ```
 
 16. Run the playbook
