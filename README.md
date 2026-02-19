@@ -50,6 +50,11 @@ If you get an error that the user process is in use it means you already started
 
 6. Run Ubuntu as yourself
 
+If you are still in Ubuntu, exit out:
+```
+exit
+```
+
 At a Windows command prompt:
 ```wsl```
 This will start Ubuntu again, and you will be your own user.
@@ -67,7 +72,7 @@ You should be able to run `ansible --version` now and see it installed correctly
 
 8. Install the AWS CLI in Ubuntu
 
-See this guide:
+See this guide, ensuring that you follow the instructions for Linux:
 https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 
 When you are finished you should be able to run `aws --version` and see it installed correctly.
@@ -85,10 +90,13 @@ If you have already configured AWS SSO within Windows then you will already have
 
 ```
 aws configure sso --profile <profilename>
-export AWS_PROFILE="<profilename>"
 ```
-Then login to your profile:
-```aws sso login --profile <profilename>```
+Answer the questions.  The Start URL is the same one that you use to log into your Usask AWS account, but remember to omit all characters after the question mark.
+
+Then log in to your profile:
+```
+aws sso login --profile <profilename>
+```
 
 11. Set the AWS profile for Ansible
 
@@ -100,6 +108,10 @@ Assuming that you are still in Ubuntu at a command prompt, change directory to w
 ```
 cd ec2-ansible-al2023
 chmod 0755 .
+```
+Now when you list the directory contents, you should see the correct permissions:
+```
+ls -al
 ```
 
 13. Fix ssh private key permissions
