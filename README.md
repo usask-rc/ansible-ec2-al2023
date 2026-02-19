@@ -50,12 +50,14 @@ Still within Ubuntu as root, change the home directory for your user (use your N
 If you get an error that the user process is in use it means you already started Ubuntu as yourself. You can restart and try again, but this time do not start Ubuntu as yourself, just go in as root first. 
 
 You can also delete your default home directory so you don't accidentally put anything there in the future **assuming that you have not already saved files there**:
-```cd /home; rm -rf abc123```
+```
+cd /home; rm -rf abc123
+```
 If you do have your own data in your default ubuntu home directory, either skip this step or copy it elsewhere first.
 
 6. Run Ubuntu as yourself
 
-If you are still in Ubuntu, exit out:
+If you are still running as root in Ubuntu, exit out:
 ```
 exit
 ```
