@@ -5,6 +5,9 @@ This is a guide to running Ansible in Ubuntu under WSL, deploying to AWS EC2 ins
 
 This guide is written for University of Saskatchewan researchers.  It may not work in your environment.
 
+You should already have at least one EC2 instance up and running, which may have been installed using terraform if you already followed the instructions here:
+https://github.com/usask-rc/ec2-sample-single-al2023
+
 1. Install WSL
 
 Open Software Center on your Usask managed Windows computer. Search for wsl. One of the options in the list should be "Microsoft Virtual Machine Platform". Click to open this item and then click Install.  A reboot of your computer will be required.
