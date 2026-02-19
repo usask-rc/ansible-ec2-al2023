@@ -1,0 +1,8 @@
+# EC2 inventory file
+
+plugin: amazon.aws.aws_ec2
+use_ssm_inventory: true
+regions:
+  - ca-central-1
+profile: "ec2sample"
+
