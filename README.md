@@ -97,6 +97,7 @@ Then log in to your profile:
 ```
 aws sso login --profile <profilename>
 ```
+You will need to control-click the URL that shows up and then use your normal browser to log in and authorize the CLI to your AWS account.
 
 11. Set the AWS profile for Ansible
 
@@ -104,15 +105,16 @@ Edit the file `aws_ec2.yml` and set the variable for `profile` to be the same as
 
 12. Fix directory permissions
 
-Assuming that you are still in Ubuntu at a command prompt, change directory to where you cloned this repo, then set permissions:
+Still in Ubuntu at a command prompt, change directory to where you cloned this repo, then set permissions:
 ```
-cd ec2-ansible-al2023
+cd ansible-ec2-al2023
 chmod 0755 .
 ```
 Now when you list the directory contents, you should see the correct permissions:
 ```
 ls -al
 ```
+If this step is not done then the file `ansible.cfg` will be ignored by Ansible since it believes the project directory is world writable and it does not trust the configuration file.
 
 13. Fix ssh private key permissions
 
