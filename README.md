@@ -24,7 +24,7 @@ You should see a list of distributions that could be installed.  If you see anyt
 
 ```wsl --install Ubuntu```
 
-Remember to set a root password that you will remember, because you will need to type it a few times in the future.
+Set a password for your user that you will remember, because you will need to type it a few times in the future.
 
 4. Allow Ubuntu to set file permissions
 
