@@ -108,7 +108,9 @@ cd ansible-ec2-al2023
 chmod 0755 .
 ```
 Now when you list the directory contents, you should see the correct permissions:
+
 ```ls -al```
+
 If this step is not done then the file `ansible.cfg` will be ignored by Ansible since it believes the project directory is world writable and it does not trust the configuration file.
 
 13. Fix ssh private key permissions
@@ -122,6 +124,7 @@ If you are using a different private key then you need to update the key file pa
 14. Run ansible and show the EC2 hosts
 
 Run the following command and see that it shows the EC2 hosts:
+
 ```ansible-inventory -i aws_ec2.yml --graph```
 
 15. Check ssh into the target host
