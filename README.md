@@ -148,8 +148,15 @@ Get the public host name from the inventory list above.  It will be something li
 
 If all goes well the Ansible output should not contain any red text.
 
-Note: if you are trying to get ssh agent working in WSL, the syntax is slightly different:
+#### ansible.cfg
+
+This repo contains a file `ansible.cfg` that sets some ssh properties for ansible. This is not normally needed, however Ubuntu under WSL behaves in a similar fashion to running Ansible [within a Docker container](https://github.com/semaphoreui/semaphore/issues/309#issuecomment-432515181).
+
+#### ssh-agent
+
+If you are trying to get ssh agent working in Ubuntu under WSL, the syntax is slightly different than normal:
 ```
 eval `ssh-agent -s`
 ssh-add ~/.ssh/ec2sample
 ```
+
