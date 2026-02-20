@@ -150,7 +150,7 @@ If all goes well the Ansible output should not contain any red text.
 
 #### ansible.cfg
 
-This repo contains a file `ansible.cfg` that sets some ssh properties for ansible. The `ControlPath` option is not normally needed, however Ubuntu under WSL behaves in a similar fashion to running Ansible [within a Docker container](https://github.com/semaphoreui/semaphore/issues/309#issuecomment-432515181).
+This repo contains a file `ansible.cfg` that sets some ssh properties for ansible. The `control_path` option does not normally need to be overridden, however Ubuntu under WSL behaves in a similar fashion to running Ansible [within a Docker container](https://github.com/semaphoreui/semaphore/issues/309#issuecomment-432515181).
 
 The ssh option `ControlPersist` is also needed for Usask researchers since the campus firewall will block Ansible of it starts up too many new ssh sessions rapidly. The 60 second timeout means that Ansible can reuse the same ssh connection for 60 seconds - you can increase this if your playbook is running longer than 60 seconds.
 
