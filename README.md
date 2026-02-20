@@ -41,19 +41,19 @@ Add a new section to this file and then save the file:
 [automount]
 options = "metadata"
 ```
-5. Change your home directory
+5. Change your home directory [OPTIONAL]
 
-Still within Ubuntu as root, change the home directory for your user (use your NSID here in place of abc123):
+It can be convenient to use the same home directory on Windows and Unbuntu, so that ssh keys are easily found in both (ie: at a path like `~/.ssh/key`). If you want to do this, then while you are still within Ubuntu as root change the home directory for your user (use your NSID here in place of abc123):
 
 ```usermod -d /mnt/c/Users/abc123 abc123```
 
 If you get an error that the user process is in use it means you already started Ubuntu as yourself. You can restart and try again, but this time do not start Ubuntu as yourself, just go in as root first. 
 
-You can also delete your default home directory so you don't accidentally put anything there in the future **assuming that you have not already saved files there**:
+You can also delete your default home directory in Ubuntu so you don't accidentally put anything there in the future **assuming that you have not already saved files there**:
 
 ```cd /home; rm -rf abc123```
 
-If you do have your own data in your default ubuntu home directory, either skip this step or copy it elsewhere first.
+If you do have your own data in your default ubuntu home directory, either skip this step or copy the data elsewhere first.
 
 6. Run Ubuntu as yourself
 
