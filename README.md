@@ -65,7 +65,7 @@ At a Windows command prompt:
 
 ```wsl```
 
-This will start Ubuntu again, and you will be your own user.
+This will start Ubuntu again, and you will be logged in as your own non-root user.
 
 7. Update Ubuntu and install Ansible
 
@@ -80,7 +80,7 @@ You should be able to run `ansible --version` now and see it installed correctly
 
 8. Install the AWS CLI in Ubuntu
 
-See this guide, ensuring that you follow the instructions for Linux:
+See this guide, ensuring that you follow the instructions for "Command line installer - Linux x86 (64 bit)":
 https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 
 When you are finished you should be able to run `aws --version` and see it installed correctly.
