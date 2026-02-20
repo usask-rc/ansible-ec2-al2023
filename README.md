@@ -50,16 +50,21 @@ Still within Ubuntu as root, change the home directory for your user (use your N
 If you get an error that the user process is in use it means you already started Ubuntu as yourself. You can restart and try again, but this time do not start Ubuntu as yourself, just go in as root first. 
 
 You can also delete your default home directory so you don't accidentally put anything there in the future **assuming that you have not already saved files there**:
+
 ```cd /home; rm -rf abc123```
+
 If you do have your own data in your default ubuntu home directory, either skip this step or copy it elsewhere first.
 
 6. Run Ubuntu as yourself
 
 If you are still running as root in Ubuntu, exit out:
+
 ```exit```
 
 At a Windows command prompt:
+
 ```wsl```
+
 This will start Ubuntu again, and you will be your own user.
 
 7. Update Ubuntu and install Ansible
@@ -83,6 +88,7 @@ When you are finished you should be able to run `aws --version` and see it insta
 9. Install the AWS Python libraries in Ubuntu
 
 Run the following command in Ubuntu:
+
 ```sudo apt install python3-botocore python3-boto3 -y```
 
 10. Configure an AWS SSO session [OPTIONAL]
@@ -90,10 +96,13 @@ Run the following command in Ubuntu:
 If you have already configured AWS SSO within Windows then you will already have a file at `~/.aws/config` otherwise you can run the following:
 
 ```aws configure sso --profile <profilename>```
+
 Answer the questions.  The Start URL is the same one that you use to log into your Usask AWS account, but remember to omit all characters after the question mark.
 
 Then log in to your profile:
+
 ```aws sso login --profile <profilename>```
+
 You will need to control-click the URL that shows up and then use your normal browser to log in and authorize the CLI to your AWS account.
 
 11. Set the AWS profile for Ansible
@@ -136,7 +145,8 @@ Get the public host name from the inventory list above.  It will be something li
 16. Run the playbook
 
 ```ansible-playbook -i aws_ec2.yml update.yml```
-If all goes well the Ansible output should not be red text.
+
+If all goes well the Ansible output should not contain any red text.
 
 Note: if you are trying to get ssh agent working in WSL, the syntax is slightly different:
 ```
