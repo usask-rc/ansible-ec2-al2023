@@ -93,7 +93,7 @@ Run the following command in Ubuntu:
 
 10. Configure an AWS SSO session [OPTIONAL]
 
-If you have already configured AWS SSO within Windows then you will already have a file at `~/.aws/config` otherwise you can run the following:
+If you have already configured AWS SSO within Windows and you already changed your home directroy then you will already have a file at `~/.aws/config` otherwise you can run the following:
 
 ```aws configure sso --profile <profilename>```
 
